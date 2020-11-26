@@ -7,8 +7,8 @@ inputs:
   jenkinsUrl:  
     description: 'URL to Jenkinsserver'
     required: true
-  username:  
-    description: 'Username'
+  env:
+    description: 'environment'
     required: true
   token:  
     description: 'Token'
