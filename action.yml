@@ -25,4 +25,4 @@ outputs:
     description: 'The time the job is posted to jenkins'
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: 'index.js'
