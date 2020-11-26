@@ -3,7 +3,7 @@ jobs:
   curl:
     runs-on: ubuntu-latest
     steps:
-      - uses: hofry/jenkins-action@main
+      - uses: hofry/jenkins-action@master
         with:
           jenkinsUrl: http://188.166.119.105:8080/
           env: Staging
