@@ -6,7 +6,7 @@ try {
   if (core.getInput('tag') !== '')
     tag = core.getInput('tag');
   else
-    const tag = github.context.ref.replace('refs/tags/', '');
+    tag = github.context.ref.replace('refs/tags/', '');
   const jenkinsUrl = core.getInput('jenkinsUrl');
   const env = core.getInput('env');
   const token = core.getInput('token');
