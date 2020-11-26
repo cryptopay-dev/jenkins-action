@@ -8,7 +8,7 @@ inputs:
     description: 'URL to Jenkinsserver'
     required: true
   env:
-    description: 'environment'
+    description: 'Environment'
     required: true
   token:  
     description: 'Token'
@@ -16,9 +16,10 @@ inputs:
   job:  
     description: 'Name of job'
     required: true
-  params:  
-    description: 'Json with "name":"value" params'
+  tag:
+    description: 'Tag'
     required: false
+    default: ''
 outputs:
   time: 
     description: 'The time the job is posted to jenkins'
