@@ -7,5 +7,6 @@ jobs:
         with:
           jenkinsUrl: http://188.166.119.105:8080/
           env: Staging
-          token: deploy_ledger
+          token: 11c095641ca8fe0b6ab5c50f5f5876dc64
           job: deploy_ledger
+          username: hofry
