@@ -22,7 +22,7 @@ inputs:
   tag:
     description: 'Tag'
     required: false
-    default: 'latest'
+    default: ''
 outputs:
   time: 
     description: 'The time the job is posted to jenkins'
