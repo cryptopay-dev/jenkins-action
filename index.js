@@ -10,9 +10,10 @@ try {
   const jenkinsUrl = core.getInput('jenkinsUrl');
   const env = core.getInput('env');
   const token = core.getInput('token');
+  const username = core.getInput('username');
   const jobName = core.getInput('job');
   
-  request.get({baseUrl: jenkinsUrl, uri: 'job/' + env + '/' + jobName + '/buildWithParameters?token=' + token + '&DOCKER_IMAGE_TAG=' + tag})
+  request.get({baseUrl: jenkinsUrl, uri: 'job/' + env + '/' + jobName + '/buildWithParameters?token=' + jobName + '&DOCKER_IMAGE_TAG=' + tag}).auth(username,token)
     
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
