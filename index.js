@@ -13,7 +13,7 @@ try {
   const username = core.getInput('username');
   const jobName = core.getInput('job');
   
-  request.post({baseUrl: jenkinsUrl, uri: 'job/' + env + '/' + jobName + '/buildWithParameters?token=' + jobName + '&DOCKER_IMAGE_TAG=' + tag}).auth(username,token)
+  request.post({baseUrl: jenkinsUrl, uri: 'job/' + env + '/job/' + jobName + '/buildWithParameters?token=' + jobName + '&DOCKER_IMAGE_TAG=' + tag}).auth(username,token)
     
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
