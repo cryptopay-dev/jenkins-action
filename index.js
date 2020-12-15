@@ -3,10 +3,10 @@ const github = require('@actions/github');
 const request = require('request');
 
 try {
-  if (core.getInput('tag') == 'latest')
-    tag = core.getInput('tag');
-  else
-    tag = github.context.ref.replace('refs/tags/', '');
+ // if (core.getInput('tag') == 'latest')
+ //   tag = core.getInput('tag');
+ // else
+  tag = github.context.ref.replace('refs/tags/', '');
   const jenkinsUrl = core.getInput('jenkinsUrl');
   const token = core.getInput('token');
   
