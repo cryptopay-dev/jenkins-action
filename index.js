@@ -3,7 +3,7 @@ const github = require('@actions/github');
 const request = require('request');
 
 try {
-  if (core.getInput('tag') !== '')
+  if (core.getInput('tag') == 'latest')
     tag = core.getInput('tag');
   else
     tag = github.context.ref.replace('refs/tags/', '');
