@@ -13,9 +13,6 @@ inputs:
   token:  
     description: 'Token'
     required: true
-  username:
-    description: 'Username'
-    required: true
   job:  
     description: 'Name of job'
     required: true
