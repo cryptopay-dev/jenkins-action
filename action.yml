@@ -7,14 +7,8 @@ inputs:
   jenkinsUrl:  
     description: 'URL to Jenkinsserver'
     required: true
-  env:
-    description: 'Environment'
-    required: true
   token:  
     description: 'Token'
-    required: true
-  job:  
-    description: 'Name of job'
     required: true
   tag:
     description: 'Tag'
