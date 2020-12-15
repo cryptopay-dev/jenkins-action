@@ -12,7 +12,7 @@ inputs:
     required: true
   tag:
     description: 'Tag'
-    required: true
+    required: false
     default: ''
 outputs:
   time: 
