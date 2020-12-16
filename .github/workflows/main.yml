@@ -7,3 +7,4 @@ jobs:
         with:
           jenkinsUrl: http://188.166.119.105:8080/
           token: testtoken
+          tag: latest
