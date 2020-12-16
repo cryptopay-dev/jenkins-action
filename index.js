@@ -11,7 +11,7 @@ try {
   const jenkinsUrl = core.getInput('jenkinsUrl');
   const token = core.getInput('token');
   core.debug(`tag: ${tag}`);
-  request.post({baseUrl: jenkinsUrl, uri: '/generic-webhook-trigger/invoke?token=' + token, qs: JSON.parse('{"DOCKER_IMAGE_TAG": "' + tag + '"}') });
+  request.post({baseUrl: jenkinsUrl, uri: '/generic-webhook-trigger/invoke?token=' + token, qs: JSON.parse('{"DOCKER_IMAGE_TAG": "master"}') });
     
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
