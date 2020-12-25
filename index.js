@@ -12,8 +12,7 @@ try {
   
   core.info(`Triggering the job`);
   request.post({baseUrl: jenkinsUrl, uri: '/generic-webhook-trigger/invoke?token=' + token, body: {DOCKER_IMAGE_TAG: tag}, json: true});
-  core.info(`baseUrl: ${jenkinsUrl}`);
-  core.info(`token: ${token}`);
+  core.info(`tag: ${tag}`);
   core.info(`Done!`);
   
 } catch (error) {
