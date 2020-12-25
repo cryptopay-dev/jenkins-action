@@ -9,9 +9,11 @@ try {
     tag = github.context.ref.replace('refs/tags/', '');
   const jenkinsUrl = core.getInput('jenkinsUrl');
   const token = core.getInput('token');
-  core.debug(`tag: ${tag}`);
+  
+  core.info(`Triggering the job`);
   request.post({baseUrl: jenkinsUrl, uri: '/generic-webhook-trigger/invoke?token=' + token, body: {DOCKER_IMAGE_TAG: tag}, json: true});
-    
+  core.info(`Done!`);
+  
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
 } catch (error) {
